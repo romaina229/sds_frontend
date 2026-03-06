@@ -7,7 +7,7 @@ const api = axios.create({
         'Accept': 'application/json',
         'X-Requested-With': 'XMLHttpRequest',
     },
-    withCredentials: true,
+    withCredentials: false,
 });
 
 // Intercepteur pour gérer les tokens et erreurs
