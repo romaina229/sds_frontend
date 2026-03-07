@@ -76,7 +76,7 @@ export default function HomePage() {
                     <div className="max-w-3xl">
                         <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
                             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                            Fondée en 2021 · Abomey-Calavi, Bénin bj
+                            Fondée en 2021 · Abomey-Calavi, Bénin BJ
                         </div>
                         <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
                             Shalom Digital
