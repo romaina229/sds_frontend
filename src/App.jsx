@@ -2,6 +2,9 @@ import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { ToastProvider } from './context/ToastContext';
+import ScrollToTop from './components/shared/ScrollToTop';
+import BackToTop from './components/shared/BackToTop';
+
 
 // Pages publiques
 import HomePage from './pages/public/HomePage';
@@ -34,6 +37,8 @@ export default function App() {
     <AuthProvider>
       <ToastProvider>
         <BrowserRouter>
+          <ScrollToTop />   {/* ← remet en haut à chaque navigation */}
+          <BackToTop />     {/* ← bouton flottant visible après 300px de scroll */}
           <Routes>
             {/* PUBLIC */}
             <Route path="/" element={<HomePage />} />
