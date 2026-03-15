@@ -9,6 +9,7 @@ const CATEGORIES = [
     { key: 'excel',     label: 'Gestion & Données',   icon: 'fas fa-table',          color: 'text-green-500' },
     { key: 'survey',    label: 'Collecte de Données', icon: 'fas fa-clipboard-list', color: 'text-orange-500' },
     { key: 'formation', label: 'Formations',           icon: 'fas fa-graduation-cap', color: 'text-purple-500' },
+    { key: 'materiel',  label: 'Matériels & Maintenance', icon: 'fas fa-desktop',        color: 'text-gray-600' },
 ];
 
 const STATS = [
@@ -295,16 +296,33 @@ function ServiceCard({ service }) {
             )}
 
             <div className="border-t pt-4 mt-4">
-                <div className="text-slate-400 text-xs mb-1 text-center">À partir de</div>
-                <div className="text-2xl font-black text-blue-600 text-center">{formatPriceFcfa(service.ttc_fcfa)}</div>
-                <div className="text-slate-400 text-sm text-center">{formatPriceEuro(service.ttc_euro)} TTC</div>
-                {service.duree && <div className="text-sm mt-1 text-red-500 text-sm mt-1 text-center">Durée : {service.duree}</div>}
+                {service.prix_fcfa > 0 ? (
+                    <>
+                        <div className="text-slate-400 text-xs mb-1 text-center">À partir de</div>
+                        <div className="text-2xl font-black text-blue-600 text-center">{formatPriceFcfa(service.ttc_fcfa)}</div>
+                        <div className="text-slate-400 text-sm text-center">{formatPriceEuro(service.ttc_euro)} TTC</div>
+                    </>
+                ) : (
+                    <div className="text-center">
+                        <span className="inline-block bg-slate-100 text-slate-600 font-bold px-4 py-1.5 rounded-full text-sm">
+                            <i className="fas fa-tag mr-1" />Sur devis
+                        </span>
+                    </div>
+                )}
+                {service.duree && <div className="text-sm mt-2 text-red-500 text-center">Durée : {service.duree}</div>}
             </div>
 
-            <Link to={`/commander/${service.id}`}
-                className="mt-4 block text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition-all duration-300">
-                Commander
-            </Link>
+            {service.prix_fcfa > 0 ? (
+                <Link to={`/commander/${service.id}`}
+                    className="mt-4 block text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition-all duration-300">
+                    Commander
+                </Link>
+            ) : (
+                <Link to="/contact"
+                    className="mt-4 block text-center bg-slate-700 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition-all duration-300">
+                    <i className="fas fa-envelope mr-2" />Demander un devis
+                </Link>
+            )}
         </div>
     );
 }
