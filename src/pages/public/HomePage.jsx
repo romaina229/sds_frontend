@@ -130,7 +130,7 @@ export default function HomePage() {
                                 et la mise en œuvre de solutions numériques adaptées aux besoins des professionnels, organisations et porteurs de projets.
                             </p>
                             <p className="text-slate-600 mb-6 leading-relaxed">
-                                Notre expertise s'articule autour de trois domaines clés :
+                                Notre expertise s'articule autour de quatre domaines clés :
                             </p>
                             <div className="space-y-4 mb-8">
                                 {[
@@ -148,6 +148,11 @@ export default function HomePage() {
                                     icon: "fas fa-mobile-screen",
                                     title: "Collecte de données digitales",
                                     desc: "KoboToolbox, ODK, SurveyCTO pour S&E et recherche",
+                                    },
+                                    {
+                                    icon: "fas fa-desktop",
+                                    title: "Matériels & Maintenance informatique",
+                                    desc: "Acquisition de matériels, didacticiels, consommables et prestations de maintenance",
                                     },
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-4 p-4 bg-slate-50 rounded-xl">
