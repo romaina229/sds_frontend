@@ -14,7 +14,7 @@ const CATEGORIES = [
 
 const STATS = [
     { value: '50+', label: 'Projets réalisés' },
-    { value: '3', label: 'Domaines d\'expertise' },
+    { value: '4', label: 'Domaines d\'expertise' },
     { value: '100%', label: 'Clients satisfaits' },
     { value: '24h', label: 'Réactivité garantie' },
 ];
@@ -77,7 +77,7 @@ export default function HomePage() {
                     <div className="max-w-3xl">
                         <div className="inline-flex items-center gap-2 bg-blue-500/20 border border-blue-400/30 text-blue-300 px-4 py-2 rounded-full text-sm font-medium mb-6 backdrop-blur-sm">
                             <span className="w-2 h-2 rounded-full bg-blue-400 animate-pulse" />
-                            Fondée en 2021 · Abomey-Calavi, Bénin BJ
+                            Fondée en 2021 · Abomey-Calavi, Bénin
                         </div>
                         <h1 className="text-4xl md:text-6xl font-black text-white leading-tight mb-6">
                             Shalom Digital
@@ -167,7 +167,7 @@ export default function HomePage() {
                                 ))}
                                 </div>
                             <a href="#services" className="bg-blue-500 hover:bg-blue-600 text-white font-bold px-6 py-3 rounded-xl transition-all inline-flex items-center gap-2">
-                                Voir tous nos services →
+                                Voir tous nos services
                             </a>
                         </div>
                         <div className="relative">
@@ -193,7 +193,7 @@ export default function HomePage() {
                         <h2 className="text-4xl font-black text-slate-800 mt-2 mb-4">Services Complets</h2>
                         <p className="text-slate-500 max-w-2xl mx-auto">
                             Découvrez notre gamme complète de services numériques adaptés à tous vos besoins professionnels.
-                            <br/><span className="text-sm text-slate-400">Tous les prix incluent une AIB de 5%</span>
+                            <br/><span className="text-sm text-slate-400">Tous les prix incluent un AIB de 5%</span>
                         </p>
                     </div>
 
