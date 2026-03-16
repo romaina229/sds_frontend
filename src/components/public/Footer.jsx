@@ -44,6 +44,7 @@ export default function Footer() {
                                 { label: 'Gestion de données', icon: 'fas fa-database', href: '/#services' },
                                 { label: 'Collecte de données', icon: 'fas fa-clipboard-list', href: '/#services' },
                                 { label: 'Formations', icon: 'fas fa-graduation-cap', href: '/#services' },
+                                { label: 'Matériels & Maintenance', icon: 'fas fa-desktop', href: '/#services' },
                                 { label: 'Tarifs', icon: 'fas fa-money-bill-wave', href: '/#tarifs' },
                             ].map((l, i) => (
                                 <li key={i}>
