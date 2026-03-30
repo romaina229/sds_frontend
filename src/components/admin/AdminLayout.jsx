@@ -10,7 +10,6 @@ const MENU = [
     { to: '/admin/contacts',     label: 'Contacts',           icon: 'fas fa-envelope' },
     { to: '/admin/blog',         label: 'Blog',               icon: 'fas fa-pen-nib' },
     { to: '/admin/parametres',   label: 'Paramètres',         icon: 'fas fa-sliders-h' },
-    { to: '/admin/previews',     label: 'Prévisualisations',  icon: 'fas fa-eye' },
 ];
 
 export default function AdminLayout() {
