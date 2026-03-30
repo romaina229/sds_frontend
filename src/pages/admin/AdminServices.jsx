@@ -6,7 +6,7 @@ const CATEGORIES = [
     { value: 'web', label: '🌐 Sites Web' },
     { value: 'excel', label: '📊 Gestion & Données' },
     { value: 'survey', label: '📋 Collecte de Données' },
-    { value: 'formation', label: '🎓 Formations' },
+    { value: 'formation', label: '🎓 Formations & Certifications' },
     { value: 'materiel',  label: '🖥️ Matériels & Maintenance' },
 ];
 
@@ -14,8 +14,8 @@ const ICONES = [
     'fas fa-laptop', 'fas fa-globe', 'fas fa-shopping-cart', 'fas fa-cogs',
     'fas fa-chart-bar', 'fas fa-database', 'fas fa-clipboard-list', 'fas fa-tasks',
     'fas fa-chalkboard-teacher', 'fas fa-mobile-alt', 'fas fa-code', 'fas fa-server',
-    'fas fa-desktop', 'fas fa-tools', 'fas fa-print', 'fas fa-compact-disc',
-    'fas fa-plug', 'fas fa-hdd', 'fas fa-memory', 'fas fa-network-wired',
+    'fas fa-certificate', 'fas fa-qrcode', 'fas fa-paper-plane', 'fas fa-paint-brush',
+    'fas fa-desktop', 'fas fa-tools', 'fas fa-plug', 'fas fa-compact-disc',
 ];
 
 const emptyForm = {
@@ -150,17 +150,14 @@ export default function AdminServices() {
                                     </div>
                                 </div>
                                 <div className="flex gap-1">
-                                    {service.popular && <span className="bg-yellow-100 text-yellow-700 text-xs font-bold px-1.5 py-0.5 rounded"><i className="fas fa-star" /></span>}
+                                    {service.popular && <span className="bg-yellow-100 text-yellow-700 text-xs font-bold px-1.5 py-0.5 rounded">⭐</span>}
                                     {!service.actif && <span className="bg-red-100 text-red-600 text-xs font-bold px-1.5 py-0.5 rounded">OFF</span>}
                                 </div>
                             </div>
                             <p className="text-slate-500 text-xs mb-3 line-clamp-2">{service.description}</p>
                             <div className="flex justify-between items-center">
                                 <div>
-                                    {service.prix_fcfa > 0
-                                    ? <div className="font-black text-blue-600 text-sm">{formatPriceFcfa(service.ttc_fcfa)}</div>
-                                    : <span className="text-xs font-bold bg-slate-100 text-slate-600 px-2 py-0.5 rounded-full">Sur devis</span>
-                                }
+                                    <div className="font-black text-blue-600 text-sm">{formatPriceFcfa(service.ttc_fcfa)}</div>
                                     {service.duree && <div className="text-slate-400 text-xs">⏱ {service.duree}</div>}
                                 </div>
                                 <div className="flex gap-1">
@@ -170,11 +167,11 @@ export default function AdminServices() {
                                     </button>
                                     <button onClick={() => openEdit(service)}
                                         className="text-xs px-2 py-1 rounded-lg bg-blue-50 text-blue-600 hover:bg-blue-100 font-semibold transition-all">
-                                        <i className="fas fa-pen" />
+                                        ✏️
                                     </button>
                                     <button onClick={() => handleDelete(service.id, service.nom)}
                                         className="text-xs px-2 py-1 rounded-lg bg-red-50 text-red-500 hover:bg-red-100 font-semibold transition-all">
-                                        <i className="fas fa-trash" />
+                                        🗑
                                     </button>
                                 </div>
                             </div>

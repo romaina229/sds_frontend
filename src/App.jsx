@@ -31,12 +31,13 @@ import AdminParametres from './pages/admin/AdminParametres';
 import AdminPreviews from './pages/admin/AdminPreviews';
 import AdminLayout from './components/admin/AdminLayout';
 import PrivateRoute from './components/shared/PrivateRoute';
+import AdminCertificats from './pages/admin/AdminCertificats';
 
 export default function App() {
   return (
     <AuthProvider>
       <ToastProvider>
-        <BrowserRouter>
+        <BrowserRouter future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
           <ScrollToTop />   {/* ← remet en haut à chaque navigation */}
           <BackToTop />     {/* ← bouton flottant visible après 300px de scroll */}
           <Routes>
@@ -64,6 +65,7 @@ export default function App() {
               <Route path="commandes" element={<AdminCommandes />} />
               <Route path="commandes/:id" element={<AdminCommandeDetail />} />
               <Route path="services" element={<AdminServices />} />
+              <Route path="certificats" element={<AdminCertificats />} />
               <Route path="contacts" element={<AdminContacts />} />
               <Route path="blog" element={<AdminBlog />} />
               <Route path="parametres" element={<AdminParametres />} />

@@ -8,13 +8,13 @@ const CATEGORIES = [
     { key: 'web',       label: 'Sites Web',           icon: 'fas fa-laptop-code',    color: 'text-blue-500' },
     { key: 'excel',     label: 'Gestion & Données',   icon: 'fas fa-table',          color: 'text-green-500' },
     { key: 'survey',    label: 'Collecte de Données', icon: 'fas fa-clipboard-list', color: 'text-orange-500' },
-    { key: 'formation', label: 'Formations',           icon: 'fas fa-graduation-cap', color: 'text-purple-500' },
-    { key: 'materiel',  label: 'Matériels & Maintenance', icon: 'fas fa-desktop',        color: 'text-gray-600' },
+    { key: 'formation', label: 'Formations & Certifications', icon: 'fas fa-graduation-cap', color: 'text-purple-500' },
+    { key: 'materiel',  label: 'Matériels & Maintenance',    icon: 'fas fa-desktop',        color: 'text-gray-600' },
 ];
 
 const STATS = [
     { value: '50+', label: 'Projets réalisés' },
-    { value: '4', label: 'Domaines d\'expertise' },
+    { value: '5', label: 'Domaines d\'expertise' },
     { value: '100%', label: 'Clients satisfaits' },
     { value: '24h', label: 'Réactivité garantie' },
 ];
@@ -84,9 +84,9 @@ export default function HomePage() {
                             <span className="text-blue-400 block">Solutions</span>
                         </h1>
                         <p className="text-xl text-slate-300 mb-8 leading-relaxed max-w-2xl">
-                            Votre partenaire en <strong className="text-white">solutions numériques innovantes</strong>.
-                            Nous accompagnons professionnels, ONG et organisations dans la création de sites web,
-                            la gestion de données et la collecte digitale.
+                            Votre partenaire en <strong className="text-white">solutions digitales complètes</strong> pour automatiser vos activités.
+                            Nous accompagnons professionnels, ONG et organisations avec des sites web, gestion de données,
+                            collecte digitale, attestations automatisées et matériels informatiques.
                         </p>
                         <div className="flex flex-wrap gap-4">
                             <Link to="/commander"
@@ -127,10 +127,10 @@ export default function HomePage() {
                             </h2>
                             <p className="text-slate-600 mb-4 leading-relaxed">
                                 Fondée en 2021, <strong>Shalom Digital Solutions</strong> est une entreprise spécialisée dans la conception
-                                et la mise en œuvre de solutions numériques adaptées aux besoins des professionnels, organisations et porteurs de projets.
+                                et la mise en œuvre de solutions digitales complètes pour automatiser les activités des professionnels, organisations et porteurs de projets.
                             </p>
                             <p className="text-slate-600 mb-6 leading-relaxed">
-                                Notre expertise s'articule autour de quatre domaines clés :
+                                Notre expertise s'articule autour de cinq domaines clés :
                             </p>
                             <div className="space-y-4 mb-8">
                                 {[
@@ -150,9 +150,14 @@ export default function HomePage() {
                                     desc: "KoboToolbox, ODK, SurveyCTO pour S&E et recherche",
                                     },
                                     {
+                                    icon: "fas fa-certificate",
+                                    title: "Formations & Certifications automatisées",
+                                    desc: "Attestations PDF, QR code de vérification, envoi email/WhatsApp",
+                                    },
+                                    {
                                     icon: "fas fa-desktop",
                                     title: "Matériels & Maintenance informatique",
-                                    desc: "Acquisition de matériels, didacticiels, consommables et prestations de maintenance",
+                                    desc: "Acquisition, didacticiels, consommables et prestations de maintenance",
                                     },
                                 ].map((item, i) => (
                                     <div key={i} className="flex gap-4 p-4 bg-slate-50 rounded-xl">
@@ -190,10 +195,10 @@ export default function HomePage() {
                 <div className="container mx-auto px-6">
                     <div className="text-center mb-12">
                         <span className="text-blue-500 font-semibold text-sm uppercase tracking-wider">Nos services</span>
-                        <h2 className="text-4xl font-black text-slate-800 mt-2 mb-4">Services Complets</h2>
+                        <h2 className="text-4xl font-black text-slate-800 mt-2 mb-4">Solutions digitales complètes</h2>
                         <p className="text-slate-500 max-w-2xl mx-auto">
-                            Découvrez notre gamme complète de services numériques adaptés à tous vos besoins professionnels.
-                            <br/><span className="text-sm text-slate-400">Tous les prix incluent un AIB de 5%</span>
+                            Des solutions pour automatiser vos activités : web, données, collecte, certifications et matériels informatiques.
+                            <br/><span className="text-sm text-slate-400">Tous les prix incluent une AIB de 5%</span>
                         </p>
                     </div>
 
@@ -224,6 +229,81 @@ export default function HomePage() {
                             ))}
                         </div>
                     )}
+                </div>
+            </section>
+
+
+            {/* ATTESTATIONS */}
+            <section id="attestations" className="py-20 bg-white">
+                <div className="container mx-auto px-6">
+                    <div className="grid md:grid-cols-2 gap-16 items-center">
+                        <div>
+                            <span className="text-purple-500 font-semibold text-sm uppercase tracking-wider">Nouveau service</span>
+                            <h2 className="text-4xl font-black text-slate-800 mt-2 mb-4">
+                                Attestations &amp; Certificats Automatisés
+                            </h2>
+                            <p className="text-slate-600 mb-8 leading-relaxed text-lg">
+                                Transformez vos formations en expérience digitale professionnelle.
+                            </p>
+                            <div className="space-y-4 mb-8">
+                                {[
+                                    { icon: 'fas fa-file-pdf',    color: 'text-red-500',    bg: 'bg-red-50',    text: 'Génération automatique de certificats PDF' },
+                                    { icon: 'fas fa-paper-plane', color: 'text-blue-500',   bg: 'bg-blue-50',   text: 'Envoi par email ou WhatsApp' },
+                                    { icon: 'fas fa-qrcode',      color: 'text-green-500',  bg: 'bg-green-50',  text: 'QR code de vérification intégré' },
+                                    { icon: 'fas fa-paint-brush', color: 'text-purple-500', bg: 'bg-purple-50', text: 'Modèles personnalisés à votre image' },
+                                ].map((item, i) => (
+                                    <div key={i} className="flex items-center gap-4 p-3 rounded-xl hover:bg-slate-50 transition-colors">
+                                        <div className={`w-10 h-10 ${item.bg} rounded-lg flex items-center justify-center flex-shrink-0`}>
+                                            <i className={`${item.icon} ${item.color}`} />
+                                        </div>
+                                        <span className="text-slate-700 font-medium">{item.text}</span>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="flex flex-wrap gap-3">
+                                <Link to="/commander"
+                                    className="bg-purple-600 hover:bg-purple-700 text-white font-bold px-6 py-3 rounded-xl transition-all inline-flex items-center gap-2">
+                                    <i className="fas fa-certificate" />
+                                    Générer mes attestations
+                                </Link>
+                                <Link to="/contact"
+                                    className="border border-purple-200 text-purple-600 hover:bg-purple-50 font-semibold px-6 py-3 rounded-xl transition-all inline-flex items-center gap-2">
+                                    En savoir plus
+                                </Link>
+                            </div>
+                        </div>
+                        <div className="bg-gradient-to-br from-purple-50 to-blue-50 rounded-2xl p-8 border border-purple-100">
+                            <div className="text-center mb-6">
+                                <div className="w-16 h-16 bg-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-3 shadow-lg shadow-purple-600/30">
+                                    <i className="fas fa-certificate text-white text-2xl" />
+                                </div>
+                                <div className="font-black text-slate-800 text-lg">Certificat de Formation</div>
+                                <div className="text-slate-500 text-sm">Généré automatiquement</div>
+                            </div>
+                            <div className="space-y-3">
+                                {[
+                                    { label: 'Participant', value: 'Jean-Marie AGOSSOU' },
+                                    { label: 'Formation', value: 'KoboToolbox Avancé' },
+                                    { label: 'Date', value: '15 Mars 2026' },
+                                    { label: 'Durée', value: '3 jours · 18h' },
+                                ].map((row, i) => (
+                                    <div key={i} className="flex justify-between items-center py-2 border-b border-purple-100">
+                                        <span className="text-slate-500 text-sm">{row.label}</span>
+                                        <span className="font-semibold text-slate-800 text-sm">{row.value}</span>
+                                    </div>
+                                ))}
+                                <div className="flex items-center justify-between pt-3">
+                                    <div className="w-16 h-16 bg-slate-200 rounded-lg flex items-center justify-center">
+                                        <i className="fas fa-qrcode text-slate-600 text-2xl" />
+                                    </div>
+                                    <div className="text-right">
+                                        <div className="text-xs text-slate-400">Vérifiable en ligne</div>
+                                        <div className="font-black text-purple-600">✓ Certifié SDS</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -301,33 +381,16 @@ function ServiceCard({ service }) {
             )}
 
             <div className="border-t pt-4 mt-4">
-                {service.prix_fcfa > 0 ? (
-                    <>
-                        <div className="text-slate-400 text-xs mb-1 text-center">À partir de</div>
-                        <div className="text-2xl font-black text-blue-600 text-center">{formatPriceFcfa(service.ttc_fcfa)}</div>
-                        <div className="text-slate-400 text-sm text-center">{formatPriceEuro(service.ttc_euro)} TTC</div>
-                    </>
-                ) : (
-                    <div className="text-center">
-                        <span className="inline-block bg-slate-100 text-slate-600 font-bold px-4 py-1.5 rounded-full text-sm">
-                            <i className="fas fa-tag mr-1" />Sur devis
-                        </span>
-                    </div>
-                )}
-                {service.duree && <div className="text-sm mt-2 text-red-500 text-center">Durée : {service.duree}</div>}
+                <div className="text-slate-400 text-xs mb-1 text-center">À partir de</div>
+                <div className="text-2xl font-black text-blue-600 text-center">{formatPriceFcfa(service.ttc_fcfa)}</div>
+                <div className="text-slate-400 text-sm text-center">{formatPriceEuro(service.ttc_euro)} TTC</div>
+                {service.duree && <div className="text-sm mt-1 text-red-500 text-sm mt-1 text-center">Durée : {service.duree}</div>}
             </div>
 
-            {service.prix_fcfa > 0 ? (
-                <Link to={`/commander/${service.id}`}
-                    className="mt-4 block text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition-all duration-300">
-                    Commander
-                </Link>
-            ) : (
-                <Link to="/contact"
-                    className="mt-4 block text-center bg-slate-700 hover:bg-slate-800 text-white font-semibold py-3 rounded-xl transition-all duration-300">
-                    <i className="fas fa-envelope mr-2" />Demander un devis
-                </Link>
-            )}
+            <Link to={`/commander/${service.id}`}
+                className="mt-4 block text-center bg-blue-500 hover:bg-blue-600 text-white font-semibold py-3 rounded-xl transition-all duration-300">
+                Commander
+            </Link>
         </div>
     );
 }

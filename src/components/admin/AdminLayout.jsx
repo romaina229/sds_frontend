@@ -6,6 +6,7 @@ const MENU = [
     { to: '/admin',              label: 'Tableau de bord',   icon: 'fas fa-chart-line',    exact: true },
     { to: '/admin/commandes',    label: 'Commandes',          icon: 'fas fa-shopping-cart' },
     { to: '/admin/services',     label: 'Services',           icon: 'fas fa-cogs' },
+    { to: '/admin/certificats',  label: 'Certificats', icon: 'fas fa-certificate' },
     { to: '/admin/contacts',     label: 'Contacts',           icon: 'fas fa-envelope' },
     { to: '/admin/blog',         label: 'Blog',               icon: 'fas fa-pen-nib' },
     { to: '/admin/parametres',   label: 'Paramètres',         icon: 'fas fa-sliders-h' },
@@ -66,7 +67,7 @@ export default function AdminLayout() {
                     )}
                     <button onClick={handleLogout}
                         className="flex items-center gap-3 px-3 py-2 w-full rounded-xl text-slate-400 hover:text-red-400 hover:bg-red-500/10 transition-all">
-                        <span className="text-lg flex-shrink-0">🚪</span>
+                        <span className="text-lg flex-shrink-0"><i className="fas fa-sign-out-alt text-sm" /></span>
                         {sidebarOpen && <span className="text-sm font-medium">Déconnexion</span>}
                     </button>
                 </div>
