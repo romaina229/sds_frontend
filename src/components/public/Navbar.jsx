@@ -40,7 +40,7 @@ export default function Navbar() {
                         <img src="/images/Logosds.png" alt="SDS" className="h-20 w-auto"
                             onError={e => e.target.style.display = 'none'} />
                         <span className={`font-black text-lg ${textClass}`}>
-                            SD <span className="text-blue-500">Solutions</span>
+                            Shalom Digital <span className="text-blue-500">Solutions</span>
                         </span>
                     </Link>
 
